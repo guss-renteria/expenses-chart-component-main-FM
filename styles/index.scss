@@ -1,0 +1,29 @@
+$soft_red: hsl(10, 79%, 65%);
+$cyan: hsl(186, 34%, 60%);
+
+$dark_brown: hsl(25, 47%, 15%);
+$medium_brown: hsl(28, 10%, 53%);
+$cream: hsl(27, 66%, 92%);
+$very_pale_orange: hsl(33, 100%, 98%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: $dark_brown;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'DM Sans', sans-serif;
+}
+html {
+  font-size: .625rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+body {
+  background: $cream;
+}
+footer {
+  display: none;
+}
