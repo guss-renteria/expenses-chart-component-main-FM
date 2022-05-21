@@ -36,17 +36,19 @@ footer {
 }
 
 main {
-  width: min(90%, 60rem);
+  width: min(90%, 50rem);
   margin: 0 auto;
 
   section.header {
+    overflow: hidden;
     margin-bottom: 1.8rem;
-    padding: 2.4rem 3.2rem;
+    padding: 2.8rem;
 
     background: $soft_red;
     border-radius: 1.8rem;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
@@ -55,17 +57,153 @@ main {
         margin-bottom: 1rem;
 
         color: $cream;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: 400;
       }
       p {
-        color: white;
+        color: $very_pale_orange;
         font-size: 3.2rem;
         font-weight: 700;
       }
     }
-    .logo {
-      img {
+  }
+
+  section.spending {
+    overflow: hidden;
+    padding: 2.8rem;
+    background: $very_pale_orange;
+    border-radius: 1.8rem;
+
+    h2 {
+      font-size: 2.4rem;
+      @media screen and (min-width: 576px) {
+        font-size: 3.2rem;
+      }
+    }
+
+    .graphic {
+      width: 100%;
+      height: 28rem;
+      margin-bottom: 2.8rem;
+      padding: 6.8rem 0 3.2rem;
+      
+      border-bottom: .2rem solid $cream;
+
+      display: flex;
+      justify-content: space-between;
+
+      .graphic-element {
+        width: max(calc(14.26% - 1rem), 2rem);
+        
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 576px) {
+          width: calc(14.26% - 1.6rem);
+        }
+
+        .element-bar {
+          flex: 1;
+
+          display: flex;
+          align-items: flex-end;
+
+          .bar {
+            width: 100%;
+            height: 100%;
+            transition: .2s ease;
+
+            background: $soft_red;
+            border-radius: .4rem;
+            cursor: pointer;
+            
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            &:hover {
+              background: #ec775f90;
+
+              .tooltip {
+                opacity: 1;
+                bottom: calc(100% + 1rem);
+              }
+            }
+            &.max {
+              background: $cyan;
+
+              &:hover {
+                background: #76b5bc90;
+              }
+            }
+
+            .tooltip {
+              opacity: 0;
+              min-width: 110%;
+              overflow: hidden;
+              padding: .8rem .6rem;
+
+              background: $dark_brown;
+              border-radius: .5rem;
+
+              color: $cream;
+              font-size: 1.2rem;
+              font-weight: 700;
+
+              position: absolute;
+              bottom: 100%;
+
+              transition: .2s ease;
+
+              @media screen and (min-width: 576px) {
+                font-size: 1.8rem;
+              }
+            }
+          }
+        }
+
+        p {
+          margin-top: 1.8rem;
+
+          color: $medium_brown;
+          font-size: 1.8rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .total {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      div:first-child {
+        p:first-child {
+          margin-bottom: .9rem;
+          color: $medium_brown;
+          font-size: 1.8rem;
+        }
+        p:last-child {
+          font-size: 3.2rem;
+          font-weight: 700;
+
+          @media screen and (min-width: 576px) {
+            font-size: 4.4rem;
+          }
+        }
+      }
+      div:last-child {
+        p:first-child {
+          margin-bottom: .3rem;
+          text-align: right;
+          font-size: 1.8rem;
+          font-weight: 700;
+        }
+        p:last-child {
+          color: $medium_brown;
+          font-size: 1.8rem;
+        }
       }
     }
   }
