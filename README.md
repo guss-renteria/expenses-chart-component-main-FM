@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor]()
-- Live Site URL: [Vercel]()
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/page-created-with-html-sass-and-js-es6-vite-QDKmi8iE9A)
+- Live Site URL: [Vercel](https://expenses-chart-component-main-fm.vercel.app/)
 
 ## My process
 
